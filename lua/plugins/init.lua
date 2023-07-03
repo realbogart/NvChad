@@ -267,6 +267,14 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+
+  {
+    "mrcjkb/haskell-tools.nvim",
+    branch = '1.x.x',
+    opts = function()
+      return require "plugins.configs.haskell.lua"
+    end,
+  },
 }
 
 local config = require("core.utils").load_config()
