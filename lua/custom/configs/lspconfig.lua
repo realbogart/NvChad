@@ -11,3 +11,9 @@ lspconfig.hls.setup({
   cmd = { "haskell-language-server-wrapper", "--lsp" }
 })
 
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  single_file_support = true,
+})
+
