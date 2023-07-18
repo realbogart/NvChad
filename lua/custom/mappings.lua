@@ -17,11 +17,24 @@ M.abc = {
     ["<leader>lr"] = {"<cmd> Telescope lsp_references include_current_line=true<CR>", "LSP references"},
     ["<leader>ld"] = {"<cmd> Telescope lsp_definitions<CR>", "LSP definitions"},
     ["<leader>li"] = {"<cmd> Telescope lsp_implementations<CR>", "LSP implementations"},
+    ["<leader>le"] = {"<cmd> Telescope diagnostics<CR>", "LSP diagnostics"},
     ["<leader>lc"] = {
       function()
         require("nvchad_ui.renamer").open()
       end,
       "LSP rename",
+    },
+    ["<leader>lh"] = {
+      function()
+        vim.lsp.buf.hover()
+      end,
+      "LSP hover",
+    },
+    ["<leader>lf"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "LSP formatting",
     },
   },
 }
