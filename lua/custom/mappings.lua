@@ -15,6 +15,7 @@ M.abc = {
     ["<leader>gf"] = {"<cmd> Telescope git_files <CR>", "Git files"},
     ["<leader>gs"] = {"<cmd> Telescope git_status <CR>", "Git status"},
     ["<leader>gc"] = {"<cmd> Telescope git_commits <CR>", "Git commits"},
+    ["<leader>gh"] = {"<cmd> Telescope git_bcommits <CR>", "Git buffer commits"},
     -- LSP bindings
     ["<leader>lr"] = {"<cmd> Telescope lsp_references include_current_line=true<CR>", "LSP references"},
     ["<leader>ld"] = {"<cmd> Telescope lsp_definitions<CR>", "LSP definitions"},
