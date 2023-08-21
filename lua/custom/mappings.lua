@@ -20,6 +20,8 @@ M.abc = {
     ["<leader>lr"] = {"<cmd> Telescope lsp_references include_current_line=true<CR>", "LSP references"},
     ["<leader>ld"] = {"<cmd> Telescope lsp_definitions<CR>", "LSP definitions"},
     ["<leader>li"] = {"<cmd> Telescope lsp_implementations<CR>", "LSP implementations"},
+    ["<leader>ls"] = {"<cmd> Telescope lsp_workspace_symbols<CR>", "LSP workspace symbols"},
+    ["<leader>lb"] = {"<cmd> Telescope lsp_document_symbols<CR>", "LSP document symbols"},
     ["<leader>le"] = {"<cmd> Telescope diagnostics<CR>", "LSP diagnostics"},
     ["<leader>lc"] = {
       function()
