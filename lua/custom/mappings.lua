@@ -10,6 +10,7 @@ M.disabled = {
 M.abc = {
   n = {
     ["<leader>tt"] = {"<cmd> Telescope <CR>", "Telescope"},
+    ["<leader>j"] = {"<cmd> Telescope jumplist <CR>", "Telescope jumplist"},
     ["<leader><leader>"] = {"<cmd> Telescope resume <CR>", "Telescope resume"},
     -- Git bindings
     ["<leader>gf"] = {"<cmd> Telescope git_files <CR>", "Git files"},
