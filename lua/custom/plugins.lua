@@ -31,9 +31,12 @@ local plugins = {
       require "custom.configs.haskell"
     end,
   },
-  
+
   {
-    "sindrets/diffview.nvim"
+    "sindrets/diffview.nvim",
+    config = function ()
+      require "custom.configs.diffview"
+    end,
   },
 }
 
