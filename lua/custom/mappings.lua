@@ -1,5 +1,7 @@
 local M = {}
 
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 M.disabled = {
   n = {
       ["<leader>gt"] = "",

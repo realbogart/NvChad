@@ -9,3 +9,7 @@ lspconfig.pyright.setup({
   single_file_support = true,
 })
 
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
