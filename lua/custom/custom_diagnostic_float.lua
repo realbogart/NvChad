@@ -18,8 +18,15 @@ M.show_diagnostic_at_bottom = function()
 
   -- Create the diagnostic message.
   local lines = {}
+  local severity_map = {}  -- Track severity for each line
+
   for _, diag in ipairs(current_diagnostics) do
-      table.insert(lines, diag.message)
+      -- If the message contains newlines, split it.
+      local msg_lines = vim.split(diag.message, "\n")
+      for _, msg_line in ipairs(msg_lines) do
+          table.insert(lines, msg_line)
+          table.insert(severity_map, diag.severity)
+      end
   end
 
   -- Calculate the length of the longest diagnostic message.
@@ -50,8 +57,8 @@ M.show_diagnostic_at_bottom = function()
   vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 
   -- Highlight the diagnostic messages.
-  for i, diag in ipairs(current_diagnostics) do
-      local highlight_group = "Diagnostic" .. (vim.diagnostic.severity[diag.severity] or "Unknown")
+  for i, severity in ipairs(severity_map) do
+      local highlight_group = "Diagnostic" .. (vim.diagnostic.severity[severity] or "Unknown")
       vim.api.nvim_buf_add_highlight(buf, -1, highlight_group, i-1, 0, -1)
   end
 
