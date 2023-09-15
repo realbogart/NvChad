@@ -1,6 +1,6 @@
 local M = {}
 
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {border="rounded", focus=false})]]
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'custom.custom_diagnostic_float'.show_diagnostic_at_bottom()]]
 
 M.disabled = {
   n = {

@@ -40,6 +40,10 @@ local plugins = {
       require "custom.configs.diffview"
     end,
   },
+
+  {
+    'https://codeberg.org/esensar/nvim-dev-container',
+  },
 }
 
 return plugins
