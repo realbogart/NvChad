@@ -29,6 +29,15 @@ M.show_diagnostic_at_bottom = function()
       end
   end
 
+    -- Cap to a maximum of 20 lines.
+  if #lines > 20 then
+      for i=#lines, 22, -1 do  -- Start removing from the end
+          table.remove(lines, i)
+          table.remove(severity_map, i)  -- Also adjust the severity_map to stay consistent
+      end
+      table.insert(lines, "... (more lines truncated)")
+  end
+
   -- Calculate the length of the longest diagnostic message.
   local longest_line = 0
   for _, line in ipairs(lines) do
