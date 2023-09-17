@@ -28,7 +28,7 @@ M.abc = {
     ["<leader>le"] = {"<cmd> Telescope diagnostics<CR>", "LSP diagnostics"},
     ["<leader>lc"] = {
       function()
-        require("nvchad_ui.renamer").open()
+        require("nvchad.renamer").open()
       end,
       "LSP rename",
     },
