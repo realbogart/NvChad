@@ -24,12 +24,7 @@ local plugins = {
     },
     branch = '2.x.x',
     config = function()
-      vim.g.haskell_tools = {
-        hls = {
-          on_attach = function(client, bufnr)
-          end,
-        },
-      }
+      require "custom.configs.haskell"
     end,
     ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
   },

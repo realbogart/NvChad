@@ -30,8 +30,8 @@ M.show_diagnostic_at_bottom = function()
   end
 
     -- Cap to a maximum of 20 lines.
-  if #lines > 20 then
-      for i=#lines, 22, -1 do  -- Start removing from the end
+  if #lines > 10 then
+      for i=#lines, 12, -1 do  -- Start removing from the end
           table.remove(lines, i)
           table.remove(severity_map, i)  -- Also adjust the severity_map to stay consistent
       end
