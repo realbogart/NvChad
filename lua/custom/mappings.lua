@@ -6,6 +6,7 @@ M.disabled = {
   n = {
       ["<leader>gt"] = "",
       ["<leader>h"] = "",
+      ["<leader>ph"] = "",
       ["<tab>"] = "",
   }
 }
