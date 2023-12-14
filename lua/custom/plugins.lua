@@ -39,6 +39,22 @@ local plugins = {
   {
     'https://codeberg.org/esensar/nvim-dev-container',
   },
+
+  {
+    'realbogart/gitlab-bindings',
+  },
+
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = function ()
+      require "custom.configs.harpoon"
+    end,
+    lazy = false
+  }
 }
 
 return plugins

@@ -5,6 +5,7 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua require'custom.custom_diagnostic
 M.disabled = {
   n = {
       ["<leader>gt"] = "",
+      ["<leader>h"] = "",
       ["<tab>"] = "",
   }
 }
