@@ -18,6 +18,11 @@ M.abc = {
   },
 
   n = {
+    ["<C-u>"] = { "<C-u>zz", "Center Cursor After Half-Page Up" },
+    ["<C-d>"] = { "<C-d>zz", "Center Cursor After Half-Page Down" },
+    ["n"] = { "nzzzv", "Center Search Forward" },
+    ["N"] = { "Nzzzv", "Center Search Backward" },
+
     ["<leader>tt"] = {"<cmd> Telescope <CR>", "Telescope"},
     ["<leader>j"] = {"<cmd> Telescope jumplist <CR>", "Telescope jumplist"},
     ["<leader><leader>"] = {"<cmd> Telescope resume <CR>", "Telescope resume"},
