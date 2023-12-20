@@ -8,10 +8,15 @@ M.disabled = {
       ["<leader>h"] = "",
       ["<leader>ph"] = "",
       ["<tab>"] = "",
-  }
+  },
 }
 
 M.abc = {
+  v = {
+    ["K"] = { ":m '<-2<CR>gv=gv", "Move Visual Up" },
+    ["J"] = { ":m '>+1<CR>gv=gv", "Move Visual Down" },
+  },
+
   n = {
     ["<leader>tt"] = {"<cmd> Telescope <CR>", "Telescope"},
     ["<leader>j"] = {"<cmd> Telescope jumplist <CR>", "Telescope jumplist"},
