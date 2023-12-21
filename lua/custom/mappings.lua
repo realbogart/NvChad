@@ -8,6 +8,7 @@ M.disabled = {
       ["<leader>h"] = "",
       ["<leader>ph"] = "",
       ["<tab>"] = "",
+      ["<C-f>"] = "",
   },
 }
 
