@@ -75,6 +75,10 @@ local plugins = {
           path = "~/obsidian",
         },
       },
+
+      completion = {
+        min_chars = 1
+      }
     },
   },
 }
