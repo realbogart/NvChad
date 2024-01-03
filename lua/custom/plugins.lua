@@ -54,7 +54,29 @@ local plugins = {
       require "custom.configs.harpoon"
     end,
     lazy = false
-  }
+  },
+
+  {
+    "epwalsh/obsidian.nvim",
+    version = "v2.5.3",
+    lazy = true,
+    -- ft = "markdown",
+    event = {
+      "BufReadPre " .. vim.fn.expand "~" .. "/obsidian/**.md",
+      "BufNewFile " .. vim.fn.expand "~" .. "/obsidian/**.md",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      workspaces = {
+        {
+          name = "obsidian",
+          path = "~/obsidian",
+        },
+      },
+    },
+  },
 }
 
 return plugins
