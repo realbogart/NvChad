@@ -78,7 +78,13 @@ local plugins = {
 
       completion = {
         min_chars = 1
-      }
+      },
+
+      templates = {
+          subdir = "templates",
+          date_format = "%Y-%m-%d-%a",
+          time_format = "%H:%M",
+      },
     },
   },
 }
